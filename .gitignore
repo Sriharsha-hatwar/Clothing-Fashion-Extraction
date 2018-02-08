@@ -102,3 +102,7 @@ ENV/
 
 # videos
 *.mp4
+
+# Directories to be ignored.
+frames_happy/
+humans_detected_frames/
