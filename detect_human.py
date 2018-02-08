@@ -71,9 +71,7 @@ for imagePath in paths.list_images(args["images"]):
 		count+=1
 		# Instead of writing into the fle just cut copy in the new location.
 		source  = imagePath
-		print("The source path is ",source)
 		destination = directory
-		print("The destination path is ",destination)
 		shutil.copy(source, destination)
 		# cv2.imwrite(destination+str(count)+".jpg", corr)
 	#cv2.waitKey(0)
