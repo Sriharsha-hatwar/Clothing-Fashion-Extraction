@@ -10,6 +10,8 @@ import numpy as np
 import argparse
 import imutils
 import cv2
+import shutil
+import os
 
 #run by :  python detect_human.py --images <give path to source dir>
 #          Ex: python detect_human.py --images frames_happy
@@ -24,6 +26,9 @@ hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 count=0
 # loop over the image paths
+directory = './humans_detected_frames'
+if not os.path.exists(directory):
+    os.makedirs(directory)
 for imagePath in paths.list_images(args["images"]):
 	# load the image and resize it to (1) reduce detection time
 	# and (2) improve detection accuracy
@@ -62,7 +67,13 @@ for imagePath in paths.list_images(args["images"]):
 	cv2.imwrite("After NMS.png", image)'''
 	
 	####if atleast 1 human then add that frame
-	if len(pick)>=1:
+	if len(pick) >= 1:
 		count+=1
-		cv2.imwrite(destination+str(count)+".jpg", corr)
+		# Instead of writing into the fle just cut copy in the new location.
+		source  = imagePath
+		print("The source path is ",source)
+		destination = directory
+		print("The destination path is ",destination)
+		shutil.copy(source, destination)
+		# cv2.imwrite(destination+str(count)+".jpg", corr)
 	#cv2.waitKey(0)
