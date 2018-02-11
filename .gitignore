@@ -106,3 +106,6 @@ ENV/
 # Directories to be ignored.
 frames_happy/
 humans_detected_frames/
+
+# Pdf files to be ignored.
+*.pdf
