@@ -25,7 +25,7 @@ for imagePath in paths.list_images(args["images"]):
 		# 1. Uncomment if you want to remove the image from the folder
 		# os.remove(imagePath)
 		text = 'Blurry'
-	# 2. OR Comment the below two parts. 
+	# 2. OR Comment the below three lines for removal of images which are blur. 
 	cv2.putText(image, "{}: {:.2f}".format(text, blurrness), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 3)
 	cv2.imshow("Image", image)
 	key = cv2.waitKey(0)	
