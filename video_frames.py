@@ -5,7 +5,7 @@ src_file="happy.mp4"
 dest_file="./frames_happy/"
 vidcap = cv2.VideoCapture(src_file)
 ##this below statement is not working...
-vidcap.set(cv2.CAP_PROP_FPS,3)
+vidcap.set(cv2.CAP_PROP_FPS,2)
 success,image = vidcap.read()
 count = 0
 correct=1
