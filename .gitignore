@@ -113,3 +113,4 @@ humans_detected_frames/
 # YOLO Model files to be ignored.
 *.weights
 *.mp4
+darknet
