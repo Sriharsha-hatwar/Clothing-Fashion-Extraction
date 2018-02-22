@@ -114,3 +114,4 @@ humans_detected_frames/
 *.weights
 *.mp4
 darknet
+YOLO_model/yolo-face_final.weights
