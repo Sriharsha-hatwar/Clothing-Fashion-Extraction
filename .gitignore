@@ -109,3 +109,7 @@ humans_detected_frames/
 
 # Pdf files to be ignored.
 *.pdf
+
+# YOLO Model files to be ignored.
+*.weights
+*.mp4
