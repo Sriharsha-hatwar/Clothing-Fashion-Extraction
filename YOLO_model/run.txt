@@ -1,0 +1,1 @@
+./darknet yolo test cfg/yolo-face.cfg yolo-face_final.weights ./frame1423.jpg
